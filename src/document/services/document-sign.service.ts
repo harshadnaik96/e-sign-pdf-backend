@@ -27,6 +27,7 @@ export const sign = async (req: Request, res: Response) => {
         });
       }
       try {
+        res.contentType("application/pdf");
         res.download(
           await signPDF(
             files.pdf[0].path,
